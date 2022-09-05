@@ -1,0 +1,18 @@
+[[source]]
+url = "https://pypi.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[packages]
+withings-api = "*"
+sqlalchemy = "*"
+pytimeparse = "*"
+arrow = "*"
+psycopg2 = "*"
+
+[dev-packages]
+ipython = "*"
+black = "*"
+
+[requires]
+python_version = "3.10"
