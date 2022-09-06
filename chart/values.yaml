@@ -1,0 +1,5 @@
+WithingsClientId: "client_id"
+WithingsSecret: "secret"
+SqlalchemyConnString: "postgresql://user:password@localhost:5432/weight"
+RefreshPeriod: "5 minutes"
+LogLevel: "WARN"

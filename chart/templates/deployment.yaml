@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: withings-weight-to-postgres
+  labels:
+    app: withings-weight-to-postgres
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: withings-weight-to-postgres
+  template:
+    metadata:
+      labels:
+        app: withings-weight-to-postgres
+    spec:
+      containers:
+        - name: withings-weight-to-postgres
+          image: ghcr.io/soaxelbrooke/withings-weight-to-postgres:main
+          envFrom:
+            - configMapRef:
+                name: withings-weight-to-postgres

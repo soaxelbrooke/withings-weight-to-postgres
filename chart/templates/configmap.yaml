@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: withings-weight-to-postgres
+data:
+  WITHINGS_CLIENT_ID: "{{ .Values.WithingsClientId }}"
+  WITHINGS_SECRET: "{{ .Values.WithingsSecret }}"
+  SQLALCHEMY_CONN_STRING: "{{ .Values.SqlalchemyConnString }}"
+  REFRESH_PERIOD: "{{ .Values.RefreshPeriod }}"
+  LOG_LEVEL: "{{ .Values.LogLevel }}"
